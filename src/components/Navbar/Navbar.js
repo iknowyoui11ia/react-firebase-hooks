@@ -1,4 +1,5 @@
 import React from "react";
+import app from "../../firebase";
 import "./Navbar.scss";
 
 export const Navbar = () => (
@@ -23,5 +24,8 @@ export const Navbar = () => (
         </a>
       </li>
     </ul>
+    <button className="nav-btn" onClick={() => app.auth().signOut()}>
+      Sign out
+    </button>
   </nav>
 );
